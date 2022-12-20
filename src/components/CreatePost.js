@@ -19,12 +19,12 @@ const CreatePost = ({ fetchPosts }) => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
+    <form className="post-form" onSubmit={handleSubmit}>
+      <div className="input-field">
         <label htmlFor="title">Post Title</label>
         <input type="text" name="title" id="title"/>
       </div>
-      <div>
+      <div className="input-field">
         <label htmlFor="content">Post Content</label>
         <textarea name="content" id="content"></textarea>
       </div>

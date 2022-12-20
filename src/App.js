@@ -3,6 +3,7 @@ import axios from 'axios';
 import Posts from './components/Posts';
 import CreatePost from './components/CreatePost';
 import { apiBasePath } from './utils';
+import './App.css';
 
 const App = () => {
   const [posts, setPosts] = useState([]);

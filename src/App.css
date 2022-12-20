@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap');
+
+body {
+  font-family: 'Lora', serif;
+}
+
+input,
+textarea {
+  font-family: 'Lora', serif;
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+h2 {
+  margin: 0 0 2rem 0;
+}
+
+.post-form {
+  flex-basis: 175px;
+}
+
+.input-field {
+  margin-bottom: 1rem;
+}
+
+.post {
+  margin-bottom: 2rem;
+}

@@ -6,7 +6,7 @@ const Posts = ({ posts }) => {
         posts.length ? (
           posts.map(post => {
             return (
-              <article key={post.id}>
+              <article className="post" key={post.id}>
                 <h3>{post.title}</h3>
                 <p>{post.content}</p>
               </article>
