@@ -1,25 +1,20 @@
 import express from 'express';
 import cors from 'cors';
 import compression from 'compression';
+import postRoutes from './routes/posts';
 
 export default function expressApp(functionName) {
   const app = express();
-  const router = express.Router();
-  
-  router.use(compression());
+
+  app.use(compression());
+  app.use(cors());
+  app.use(express.json()); 
 
   const routerBasePath = process.env.NODE_ENV === 'dev'
     ? `/${functionName}`
-    : `/.netlify/functions/${functionName}/`;
-  
-  router.get('/hello/', (_req, res) => {
-    res.send('hello world')
-  });
+    : `/.netlify/functions/${functionName}`;
 
-  app.use(routerBasePath, router);
-
-  router.use(cors());
-  router.use(express.json());
+  app.use(`${routerBasePath}/posts`, postRoutes);
 
   return app;
 }
